@@ -5,8 +5,8 @@ const fibonacci = (number) => {
   return fibonacci(number - 1) + fibonacci(number - 2);
 };
 
-console.log(fibonacci(30));
-console.log(fibonacci(-15));
-console.log(fibonacci(-10) === fibonacci(10));
+console.log("30:", fibonacci(30));
+console.log("-15:", fibonacci(-15));
+console.log("-10 and 10 is equal:", fibonacci(-10) === fibonacci(10));
 
 module.exports = { fibonacci };

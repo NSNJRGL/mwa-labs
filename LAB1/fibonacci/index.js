@@ -1,11 +1,11 @@
 const childProcess = require("child_process");
 
-console.log("1: start");
+console.log("Step one: start");
 
 setTimeout(() => {
-  console.log("2: settimeout");
+  console.log("Step two: settimeout");
 }, 1000);
 
 childProcess.spawn("node", ["compute.js"], { stdio: "inherit" });
 
-console.log("3: end");
+console.log("Step three: end");
