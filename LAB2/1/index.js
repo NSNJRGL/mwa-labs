@@ -5,7 +5,7 @@ let indexFile;
 let status = 404;
 
 const serverAllRequests = (req, res) => {
-  if (req.method == "POST") {
+  if (req.method === "POST") {
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/json");
     res.end("{'message': 'Hello world!'}");
