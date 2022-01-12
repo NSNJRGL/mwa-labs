@@ -11,19 +11,20 @@ const serverAllRequests = (req, res) => {
     res.end("{'message': 'Hello world!'}");
   } else {
     res.setHeader("Content-Type", "text/html");
-    res.statusCode = status;
 
     switch (req.url) {
-      case "/page1.html":
-        callFs("page1.html");
-        res.end(indexFile);
+      case "/":
+        callFs("index.html", res);
         break;
-      case "/page2.html":
-        callFs("page2.html");
-        res.end(indexFile);
+      case "/page1":
+        callFs("page1.html", res);
+        break;
+      case "/page2":
+        callFs("page2.html", res);
         break;
       default:
-        res.end(indexFile);
+        res.statusCode = status;
+        res.end("Not Found");
         break;
     }
   }
@@ -31,21 +32,16 @@ const serverAllRequests = (req, res) => {
 
 const server = http.createServer(serverAllRequests);
 
-// const serveFile = function (err, buffer) {
-//   if (!err) {
-//     indexFile = buffer;
-//     status = 200;
-//   }
-// };
-
-const callFs = function (fileName) {
+const callFs = function (fileName, res) {
   fs.readFile(__dirname + `//${fileName}`, function (err, buffer) {
     if (!err) {
       indexFile = buffer;
       status = 200;
-      server.listen(4343, "localhost", function () {
-        console.log("server is running on 4343");
-      });
     }
+    res.end(indexFile);
   });
 };
+
+server.listen(4343, "localhost", function () {
+  console.log("server is running on 4343");
+});
