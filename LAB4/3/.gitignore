@@ -1,0 +1,3 @@
+node_modules
+package-lock.json
+# We have to put our .env file to our gitignore file but I did not because of the requirement of professor.
