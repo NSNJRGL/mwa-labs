@@ -1,0 +1,251 @@
+[{
+	"_id": {
+		"$oid": "61e4d8e90d3befc0c9482b4b"
+	},
+	"name": "International 2021",
+	"organizer": "Valve",
+	"teams": 18,
+	"participants": [
+		{
+			"name": "EG",
+			"region": "North America",
+			"_id": {
+				"$oid": "61e4d8e90d3befc0c9482b4c"
+			}
+		},
+		{
+			"name": "Team Liquid",
+			"region": "North America",
+			"_id": {
+				"$oid": "61e4d8e90d3befc0c9482b4d"
+			}
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "61e4d9ad0d3befc0c9482b4f"
+	},
+	"name": "Dota 2 Champions League 2021 Season 6",
+	"organizer": "Epic Esports Events",
+	"teams": 13,
+	"participants": [
+		{
+			"name": "Navi",
+			"region": "Russia",
+			"_id": {
+				"$oid": "61e4d9ad0d3befc0c9482b50"
+			}
+		},
+		{
+			"name": "Tickles",
+			"region": "Europe",
+			"_id": {
+				"$oid": "61e4d9ad0d3befc0c9482b51"
+			}
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "61e4da5d0d3befc0c9482b53"
+	},
+	"name": "Huya Winter Invitational 2021",
+	"organizer": "Huya",
+	"teams": 10,
+	"participants": [
+		{
+			"name": "Neon",
+			"region": "China",
+			"_id": {
+				"$oid": "61e4da5d0d3befc0c9482b54"
+			}
+		},
+		{
+			"name": "RNG",
+			"region": "China",
+			"_id": {
+				"$oid": "61e4da5d0d3befc0c9482b55"
+			}
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "61e4da950d3befc0c9482b57"
+	},
+	"name": "OGA Dota PIT Season 5: Europe/CIS",
+	"organizer": "HyperX",
+	"teams": 8,
+	"participants": [
+		{
+			"name": "Tundra",
+			"region": "Russia",
+			"_id": {
+				"$oid": "61e4da950d3befc0c9482b58"
+			}
+		},
+		{
+			"name": "TSpirit",
+			"region": "Russia",
+			"_id": {
+				"$oid": "61e4da950d3befc0c9482b59"
+			}
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "61e4db070d3befc0c9482b5b"
+	},
+	"name": "DPC CN 2021/22 Tour 1: Division I",
+	"organizer": "Perfect World",
+	"teams": 8,
+	"participants": [
+		{
+			"name": "Team Aster",
+			"region": "China",
+			"_id": {
+				"$oid": "61e4db070d3befc0c9482b5c"
+			}
+		},
+		{
+			"name": "PSG.LGD",
+			"region": "China",
+			"_id": {
+				"$oid": "61e4db070d3befc0c9482b5d"
+			}
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "61e4db4d0d3befc0c9482b5f"
+	},
+	"name": "META'21 Open",
+	"organizer": "Belarusian Esports",
+	"teams": 8,
+	"participants": [
+		{
+			"name": "F5",
+			"region": "Europe",
+			"_id": {
+				"$oid": "61e4db4d0d3befc0c9482b60"
+			}
+		},
+		{
+			"name": "PSG.LGD",
+			"region": "Europe",
+			"_id": {
+				"$oid": "61e4db4d0d3befc0c9482b61"
+			}
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "61e4db950d3befc0c9482b63"
+	},
+	"name": "TTK Russia DOTA2",
+	"organizer": "SGL Esports",
+	"teams": 4,
+	"participants": [
+		{
+			"name": "Miaaww",
+			"region": "Europe",
+			"_id": {
+				"$oid": "61e4db950d3befc0c9482b64"
+			}
+		},
+		{
+			"name": "ChillOut",
+			"region": "Europe",
+			"_id": {
+				"$oid": "61e4db950d3befc0c9482b65"
+			}
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "61e4dc120d3befc0c9482b67"
+	},
+	"name": "EGL One Dota 2 Season 2",
+	"organizer": "Evesports",
+	"teams": 16,
+	"participants": [
+		{
+			"name": "S5",
+			"region": "South Africa",
+			"_id": {
+				"$oid": "61e4dc120d3befc0c9482b68"
+			}
+		},
+		{
+			"name": "Energy",
+			"region": "South Africa",
+			"_id": {
+				"$oid": "61e4dc120d3befc0c9482b69"
+			}
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "61e4dc520d3befc0c9482b6b"
+	},
+	"name": "Dota 2 Champions League 2021 Season 6 Open Qualifier",
+	"organizer": "Epic Esports Events",
+	"teams": 52,
+	"participants": [
+		{
+			"name": "IVY",
+			"region": "Europe",
+			"_id": {
+				"$oid": "61e4dc520d3befc0c9482b6c"
+			}
+		},
+		{
+			"name": "Miaaw",
+			"region": "Europe",
+			"_id": {
+				"$oid": "61e4dc520d3befc0c9482b6d"
+			}
+		}
+	],
+	"__v": 0
+},
+{
+	"_id": {
+		"$oid": "61e4dc8e0d3befc0c9482b6f"
+	},
+	"name": "Moscow Premier League 2",
+	"organizer": "Russian Esports Federation",
+	"teams": 6,
+	"participants": [
+		{
+			"name": "YNGBLD",
+			"region": "Russia",
+			"_id": {
+				"$oid": "61e4dc8e0d3befc0c9482b70"
+			}
+		},
+		{
+			"name": "X5",
+			"region": "Russia",
+			"_id": {
+				"$oid": "61e4dc8e0d3befc0c9482b71"
+			}
+		}
+	],
+	"__v": 0
+}]
+
