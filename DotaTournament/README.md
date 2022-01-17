@@ -1,4 +1,4 @@
-# MWA project
+# Dota tournament information
 
 In order to start our application you should follow below steps
 
