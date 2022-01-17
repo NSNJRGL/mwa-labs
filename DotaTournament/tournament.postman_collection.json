@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "f2f8a5d8-9470-4809-b61c-34e0c0ed7ca4",
+		"name": "MWA tournament",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all tournaments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tournaments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tournaments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one tournament",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/tournaments/61e48cd146029c6a04205c7c",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tournaments",
+						"61e48cd146029c6a04205c7c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create tournament",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"TTK Russia DOTA2\",\n    \"organizer\": \"SGL Esports\",\n    \"teams\": 4,\n    \"participants\": [\n        {\n            \"name\": \"Miaaww\",\n            \"region\": \"Europe\"\n        },\n        {\n            \"name\": \"ChillOut\",\n            \"region\": \"Europe\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/tournaments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tournaments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update tournament",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"DPC-2023\",\n    \"organizer\": \"Dell\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/tournaments/61e4d1da44efb3f8b606f0ea",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tournaments",
+						"61e4d1da44efb3f8b606f0ea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete tournament",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/tournaments/61e4d4dd1e41cf51c552a032",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tournaments",
+						"61e4d4dd1e41cf51c552a032"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all participants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/tournaments/61e35c0bdc01507721c1f08e/participants",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tournaments",
+						"61e35c0bdc01507721c1f08e",
+						"participants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one participant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/tournaments/61e48c75b4e78114edb7b63e/participants/61e48c76b4e78114edb7b63f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tournaments",
+						"61e48c75b4e78114edb7b63e",
+						"participants",
+						"61e48c76b4e78114edb7b63f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create participant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"participants\": [{\n        \"name\": \"HELLO\",\n        \"region\": \"sda\"\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/tournaments/61e48cb5aa7f1fd01346235b/participants",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tournaments",
+						"61e48cb5aa7f1fd01346235b",
+						"participants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update participants",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Team Spirit2\",\n    \"region\": \"North America\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/tournaments/61e4d1da44efb3f8b606f0ea/participants/61e4d1da44efb3f8b606f0eb",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tournaments",
+						"61e4d1da44efb3f8b606f0ea",
+						"participants",
+						"61e4d1da44efb3f8b606f0eb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete participant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/tournaments/61e4d1da44efb3f8b606f0ea/participants/61e4d1da44efb3f8b606f0eb",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tournaments",
+						"61e4d1da44efb3f8b606f0ea",
+						"participants",
+						"61e4d1da44efb3f8b606f0eb"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
