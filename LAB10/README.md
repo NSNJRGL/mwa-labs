@@ -1,4 +1,4 @@
-db.games.createIndex({"publisher.location.coordinates": "2dsphere"})
-ng new angularApp -g -S --defaults
-30.439025662569385, -84.30411480738829
-30.438674159371175, -84.30999420913064
+1. npm start
+2. go to angular folder using below command
+   cd public/angularApp
+3. npm start
