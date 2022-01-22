@@ -1,0 +1,78 @@
+<h1>Job list</h1>
+<ul>
+  <li *ngFor="let job of jobs">
+    <a routerLink="/jobs/{{ job._id }}">
+      {{ job.title }}
+      {{ job.salary }}
+      {{ job.location.coordinates }}
+      {{ job.description }}
+      {{ job.experience }}
+      {{ job.skills }}
+      {{ job.postDate }}
+    </a>
+  </li>
+</ul>
+
+<h1>Create job</h1>
+<form>
+  <input
+    type="text"
+    placeholder="title"
+    name="title"
+    [(ngModel)]="job.title"
+  /><br />
+  <input
+    type="number"
+    placeholder="salary"
+    name="salary"
+    [(ngModel)]="job.salary"
+  /><br />
+  <input
+    type="text"
+    placeholder="address"
+    name="location.address"
+    [(ngModel)]="job.location.address"
+  /><br />
+  <input
+    type="text"
+    placeholder="lat"
+    name="location.coordinates[0]"
+    [(ngModel)]="job.location.coordinates[0]"
+  /><br />
+  <input
+    type="text"
+    placeholder="lon"
+    name="location.coordinates[1]"
+    [(ngModel)]="job.location.coordinates[1]"
+  /><br />
+  <input
+    type="text"
+    placeholder="description"
+    name="description"
+    [(ngModel)]="job.description"
+  /><br />
+  <input
+    type="text"
+    placeholder="experience"
+    name="experience"
+    [(ngModel)]="job.experience"
+  /><br />
+  <input
+    type="text"
+    placeholder="skills"
+    name="skills"
+    [(ngModel)]="job.skills"
+  /><br />
+  <input
+    type="date"
+    placeholder="postDate"
+    name="postDate"
+    [(ngModel)]="job.postDate"
+  /><br />
+  <button type="button" (click)="onSave()">Save</button>
+</form>
+
+title: {{ job.title }} salary: {{ job.salary }} address:
+{{ job.location.address }} lat: {{ job.location.coordinates[0] }} lon:
+{{ job.location.coordinates[1] }} description: {{ job.description }} experience:
+{{ job.experience }} skills: {{ job.skills }} postDate: {{ job.postDate }}

@@ -1,0 +1,61 @@
+<p>job-detail works!</p>
+
+<form>
+  <input
+    type="text"
+    placeholder="title"
+    name="title"
+    [(ngModel)]="job.title"
+  /><br />
+  <input
+    type="number"
+    placeholder="salary"
+    name="salary"
+    [(ngModel)]="job.salary"
+  /><br />
+  <input
+    type="text"
+    placeholder="address"
+    name="location.address"
+    [(ngModel)]="job.location.address"
+  /><br />
+  <input
+    type="text"
+    placeholder="lat"
+    name="location.coordinates[0]"
+    [(ngModel)]="job.location.coordinates[0]"
+  /><br />
+  <input
+    type="text"
+    placeholder="lon"
+    name="location.coordinates[1]"
+    [(ngModel)]="job.location.coordinates[1]"
+  /><br />
+  <input
+    type="text"
+    placeholder="description"
+    name="description"
+    [(ngModel)]="job.description"
+  /><br />
+  <input
+    type="text"
+    placeholder="experience"
+    name="experience"
+    [(ngModel)]="job.experience"
+  /><br />
+  <input
+    type="text"
+    placeholder="skills"
+    name="skills"
+    [(ngModel)]="job.skills"
+  /><br />
+  <input
+    type="date"
+    placeholder="postDate"
+    name="postDate"
+    [(ngModel)]="job.postDate"
+  /><br />
+  <button type="button" (click)="onUpdate()">Update</button>
+</form>
+<button type="button" (click)="onDelete()">Delete</button>
+<br />
