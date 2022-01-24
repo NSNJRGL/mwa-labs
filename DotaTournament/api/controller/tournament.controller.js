@@ -6,6 +6,7 @@ module.exports = {
   getAll: function (req, res) {
     let offset = parseInt(process.env.OFFSET);
     let limit = parseInt(process.env.LIMIT);
+    let search = null;
     const maxLimit = parseInt(process.env.MAX_LIMIT);
     const maxOffset = parseInt(process.env.MAX_OFFSET);
 
@@ -15,9 +16,16 @@ module.exports = {
       res.status(500).json("Limit or offset exceeded");
       return;
     }
+    if (req.query && req.query.search) {
+      search = {
+        name: {
+          $regex: req.query.search,
+        },
+      };
+    }
 
     tournaments
-      .find()
+      .find(search)
       .skip(offset)
       .limit(limit)
       .exec(function (err, tournament) {

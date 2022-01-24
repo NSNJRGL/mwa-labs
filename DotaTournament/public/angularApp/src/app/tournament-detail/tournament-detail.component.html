@@ -1,0 +1,44 @@
+<div
+  class="bg-[url(/assets/images/dpc.jpeg)] w-full min-h-screen bg-top bg-cover bg-no-repeat"
+>
+  <div class="container mx-auto py-8">
+    <h1
+      class="text-white text-center pt-4 pb-8 text-2xl uppercase font-semibold"
+    >
+      {{ this.tournament.name }}
+    </h1>
+    <ul
+      role="list"
+      class="marker:text-white list-disc pl-5 space-y-3 text-white"
+    >
+      <li>Organizer: {{ tournament.organizer }}</li>
+      <li>Team numbers: {{ tournament.teams }}</li>
+      <li>
+        Participants:
+        <ul
+          *ngFor="let participant of tournament.participants"
+          role="list"
+          class="marker:text-white list-disc pl-5 space-y-3 text-white"
+        >
+          <li>{{ participant.name }} - {{ participant.region }}</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="py-8">
+      <button
+        routerLink="/tournaments/{{ tournament._id }}/update"
+        class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
+      >
+        Update
+      </button>
+
+      <button
+        (click)="onDelete()"
+        class="bg-red-500 hover:bg-red-700 text-white ml-4 py-2 px-4 rounded"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>

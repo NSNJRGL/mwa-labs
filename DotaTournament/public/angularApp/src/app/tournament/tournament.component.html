@@ -1,0 +1,96 @@
+<div
+  class="bg-[url(/assets/images/dpc.jpeg)] w-full min-h-screen bg-bottom bg-cover bg-no-repeat"
+>
+  <div class="backdrop-blur-sm">
+    <div class="container mx-auto py-8">
+      <h1
+        class="text-white text-center pt-4 pb-8 text-2xl uppercase font-semibold"
+      >
+        Welcome to the tournaments
+      </h1>
+      <ul
+        role="list"
+        class="marker:text-white list-disc pl-5 space-y-3 text-white"
+      >
+        <li *ngFor="let tournament of tournaments">
+          <a routerLink="/tournaments/{{ tournament._id }}">
+            {{ tournament.name }}
+          </a>
+        </li>
+      </ul>
+
+      <h1 class="text-white text-center text-2xl uppercase font-semibold my-8">
+        Create new tournament
+      </h1>
+      <form>
+        <div class="grid grid-cols-1 gap-6">
+          <label for="" class="block">
+            <span class="text-white">Name</span>
+            <input
+              class="mt-1 w-full block rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+              type="text"
+              [(ngModel)]="tournament.name"
+              name="name"
+            />
+          </label>
+
+          <label for="" class="block">
+            <span class="text-white">Organizer</span>
+            <input
+              class="mt-1 w-full block rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+              type="text"
+              [(ngModel)]="tournament.organizer"
+              name="organizer"
+            />
+          </label>
+
+          <label for="" class="block">
+            <span class="text-white">Teams</span>
+            <input
+              class="mt-1 w-full block rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+              type="number"
+              [(ngModel)]="tournament.teams"
+              name="teams"
+            />
+          </label>
+
+          <h6 class="text-white">Participants</h6>
+          <label
+            for=""
+            class="block"
+            *ngFor="let participant of tournament.participants"
+          >
+            <span class="text-white inline-block align-top mr-2">Name</span>
+            <input
+              class="mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+              type="text"
+              [(ngModel)]="participant.name"
+              name="participant.name"
+            />
+
+            <span class="text-white inline-block align-top mx-4">Region</span>
+            <input
+              class="mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+              type="text"
+              [(ngModel)]="participant.region"
+              name="participant.region"
+            />
+          </label>
+        </div>
+        <button
+          (click)="onAdd()"
+          class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded mt-4"
+        >
+          Add participant
+        </button>
+      </form>
+
+      <button
+        (click)="onSubmit()"
+        class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded mt-4"
+      >
+        Create Tournament
+      </button>
+    </div>
+  </div>
+</div>

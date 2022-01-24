@@ -1,0 +1,79 @@
+<div
+  class="bg-[url(/assets/images/dpc.jpeg)] w-full min-h-screen bg-top bg-cover bg-no-repeat"
+>
+  <div class="container mx-auto py-8">
+    <h1
+      class="text-white text-center pt-4 pb-8 text-2xl uppercase font-semibold"
+    >
+      {{ this.tournament.name }}
+    </h1>
+
+    <form>
+      <div class="grid grid-cols-1 gap-6">
+        <label for="" class="block">
+          <span class="text-white">Name</span>
+          <input
+            class="mt-1 w-full block rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+            type="text"
+            [(ngModel)]="this.tournament.name"
+            name="name"
+          />
+        </label>
+
+        <label for="" class="block">
+          <span class="text-white">Organizer</span>
+          <input
+            class="mt-1 w-full block rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+            type="text"
+            [(ngModel)]="this.tournament.organizer"
+            name="organizer"
+          />
+        </label>
+
+        <label for="" class="block">
+          <span class="text-white">Teams</span>
+          <input
+            class="mt-1 w-full block rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+            type="number"
+            [(ngModel)]="this.tournament.teams"
+            name="teams"
+          />
+        </label>
+
+        <h6 class="text-white">Participants</h6>
+        <label
+          for=""
+          class="block"
+          *ngFor="let participant of this.tournament.participants"
+        >
+          <span class="text-white inline-block align-top mr-2">Name</span>
+          <input
+            class="mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+            type="text"
+            [(ngModel)]="participant.name"
+            [ngModelOptions]="{ standalone: true }"
+            [name]="participant.name"
+          />
+
+          <span class="text-white inline-block align-top mx-4">Region</span>
+          <input
+            class="mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+            type="text"
+            [(ngModel)]="participant.region"
+            [ngModelOptions]="{ standalone: true }"
+            [name]="participant.region"
+          />
+        </label>
+      </div>
+    </form>
+
+    <div class="py-8">
+      <button
+        (click)="onUpdate()"
+        class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
+      >
+        Update
+      </button>
+    </div>
+  </div>
+</div>
