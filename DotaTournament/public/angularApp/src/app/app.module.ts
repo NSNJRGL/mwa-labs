@@ -12,6 +12,8 @@ import { TournamentComponent } from './tournament/tournament.component';
 import { TournamentDetailComponent } from './tournament-detail/tournament-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TournamentUpdateComponent } from './tournament-update/tournament-update.component';
+import { MultiplyPipe } from './multiply.pipe';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { TournamentUpdateComponent } from './tournament-update/tournament-update
     TournamentDetailComponent,
     NotFoundComponent,
     TournamentUpdateComponent,
+    MultiplyPipe,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
